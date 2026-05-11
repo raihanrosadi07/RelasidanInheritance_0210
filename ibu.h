@@ -20,3 +20,18 @@ public:
     void tambahAnak(anak* pAnak);
     void cetakAnak();
 };
+
+void Ibu::tambahAnak(anak* pAnak) {
+    daftar_anak.push_back(pAnak);
+}
+
+void Ibu::cetakAnak() {
+    cout << "Daftar anak dari ibu \"" << this->nama << "\":\n";
+    for (auto& a : daftar_anak)
+    {
+        cout << a->nama << "\n";
+    }
+    cout << endl;
+}
+
+#endif
